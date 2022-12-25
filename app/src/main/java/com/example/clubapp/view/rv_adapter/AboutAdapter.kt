@@ -1,25 +1,30 @@
-package com.example.clubapp
+package com.example.clubapp.view.rv_adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.clubapp.App
+import com.example.clubapp.data.About
+import com.example.clubapp.data.AboutDataBase
 import com.example.clubapp.databinding.AboutBinding
 
-class AboutAdapter(private val abouts: List<About>) : RecyclerView.Adapter<AboutAdapter.AboutViewHolder>() {
-
+class AboutAdapter(private val abouts: List<About>) :
+    RecyclerView.Adapter<AboutAdapter.AboutViewHolder>() {
 
 
     inner class AboutViewHolder(binding: AboutBinding) : RecyclerView.ViewHolder(binding.root) {
-        val persIm : ImageView = binding.person
-        val description : TextView = binding.description
+        val persIm: ImageView = binding.person
+        val description: TextView = binding.description
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AboutViewHolder {
 
         val binding = AboutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return AboutViewHolder(binding)
+
+
     }
 
     override fun onBindViewHolder(holder: AboutViewHolder, position: Int) {
@@ -34,11 +39,6 @@ class AboutAdapter(private val abouts: List<About>) : RecyclerView.Adapter<About
         return abouts.size
     }
 
-//    fun addAbout(list: List<About>){
-//        listAd.clear()
-//        listAd.addAll(list)
-//        notifyDataSetChanged()
-//    }
 }
 
 
