@@ -1,8 +1,6 @@
 package com.example.clubapp.view
 
 import android.os.Bundle
-import android.widget.AdapterView.*
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,7 +12,7 @@ import com.example.clubapp.view.rv_adapter.ServicesAdapter
 
 class ServicesActivity : AppCompatActivity() {
 
-    lateinit var bindService: ActivityServicesBinding
+    private lateinit var bindService: ActivityServicesBinding
 
     private var servicesViewModel = App.instance.servicesViewModel
 
@@ -26,7 +24,7 @@ class ServicesActivity : AppCompatActivity() {
 
         val recyclerView: RecyclerView = bindService.servicesRecyclerView
 
-        var services = mutableListOf<Service>()
+        val services = mutableListOf<Service>()
         servicesViewModel.serviceLiveData.observe(this) { list ->
 
             list.forEach {

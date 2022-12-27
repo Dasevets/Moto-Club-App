@@ -8,7 +8,7 @@ import com.example.clubapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     private val aboutViewModel = App.instance.aboutViewModel
     private val servicesViewModel = App.instance.servicesViewModel

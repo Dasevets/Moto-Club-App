@@ -32,7 +32,7 @@ class ServicesAdapter(private val servicesDB: List<Service>, private val onClick
         holder.collapseIM.setImageResource(R.drawable.collapse_icon_close)
 
 
-        holder.itemView.setOnClickListener() {
+        holder.itemView.setOnClickListener {
             onClickListener.clickServ(servicesDB[position])
 
             if(holder.serv.visibility == GONE) {

@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import com.example.clubapp.data.Service
 import com.example.clubapp.data.ServicesDataBase
 
-class ServicesViewModel(val servicesDataBase: ServicesDataBase) {
+class ServicesViewModel(private val servicesDataBase: ServicesDataBase) {
 
     val serviceLiveData = MutableLiveData<List<Service>>()
 

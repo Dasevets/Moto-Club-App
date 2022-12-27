@@ -1,20 +1,17 @@
 package com.example.clubapp.data
 
 import android.content.Context
-import android.widget.Toast
 import com.google.gson.Gson
-
-import java.io.FileOutputStream
 
 class JSONHelper {
 
     private val FILE_NAME = "data.json"
 
     fun exportToJSON(context: Context, msg: List<Message>) : Boolean{
-        var gson = Gson()
-        var dataItems = DataItems()
+        val gson = Gson()
+        val dataItems = DataItems()
         dataItems.setMsg(msg)
-        var jsonString : String = gson.toJson(dataItems)
+        val jsonString : String = gson.toJson(dataItems)
 
             try {
                 context.openFileOutput(FILE_NAME, Context.MODE_PRIVATE).use { fileOutputStream ->

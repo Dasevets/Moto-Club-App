@@ -12,7 +12,7 @@ import com.example.clubapp.databinding.ActivityContactsBinding
 
 class ContactsActivity : AppCompatActivity() {
 
-    lateinit var bindingCont: ActivityContactsBinding
+    private lateinit var bindingCont: ActivityContactsBinding
 
     private val msgViewModel = App.instance.msgViewModel
 
@@ -21,7 +21,7 @@ class ContactsActivity : AppCompatActivity() {
         bindingCont = ActivityContactsBinding.inflate(layoutInflater)
         setContentView(bindingCont.root)
 
-        var msgBD = mutableListOf<Message>()
+        val msgBD = mutableListOf<Message>()
         msgViewModel.msgLiveData.observe(this) { list ->
 
             list.forEach {

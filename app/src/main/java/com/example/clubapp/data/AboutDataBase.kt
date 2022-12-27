@@ -2,7 +2,7 @@ package com.example.clubapp.data
 
 import com.example.clubapp.R
 
-class AboutDataBase () : BaseDataBase {
+class AboutDataBase : BaseDataBase {
 
     private val aboutDB = mutableListOf(
         About(

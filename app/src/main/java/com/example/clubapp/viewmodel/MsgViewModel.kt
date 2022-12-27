@@ -2,11 +2,10 @@ package com.example.clubapp.viewmodel
 
 import android.content.Context
 import androidx.lifecycle.MutableLiveData
-import com.example.clubapp.data.JSONHelper
 import com.example.clubapp.data.Message
 import com.example.clubapp.data.MsgDataBase
 
-class MsgViewModel(val msgDataBase: MsgDataBase) {
+class MsgViewModel(private val msgDataBase: MsgDataBase) {
     val msgLiveData = MutableLiveData<List<Message>>()
 
 

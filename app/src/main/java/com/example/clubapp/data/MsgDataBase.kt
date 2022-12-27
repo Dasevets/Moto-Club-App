@@ -2,7 +2,7 @@ package com.example.clubapp.data
 
 import android.content.Context
 
-class MsgDataBase () : BaseDataBase {
+class MsgDataBase : BaseDataBase {
 
     private var msgDB = mutableListOf<Message>()
 

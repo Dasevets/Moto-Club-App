@@ -2,7 +2,6 @@ package com.example.clubapp
 
 import android.app.Application
 import com.example.clubapp.data.AboutDataBase
-import com.example.clubapp.data.BaseDataBase
 import com.example.clubapp.data.MsgDataBase
 import com.example.clubapp.data.ServicesDataBase
 import com.example.clubapp.viewmodel.AboutViewModel
@@ -11,13 +10,13 @@ import com.example.clubapp.viewmodel.ServicesViewModel
 
 class App : Application() {
 
-    lateinit var aboutDB: AboutDataBase
+    private lateinit var aboutDB: AboutDataBase
     lateinit var aboutViewModel: AboutViewModel
 
-    lateinit var serviceDB : ServicesDataBase
+    private lateinit var serviceDB : ServicesDataBase
     lateinit var servicesViewModel: ServicesViewModel
 
-    lateinit var msgDB : MsgDataBase
+    private lateinit var msgDB : MsgDataBase
     lateinit var msgViewModel: MsgViewModel
 
     override fun onCreate() {
