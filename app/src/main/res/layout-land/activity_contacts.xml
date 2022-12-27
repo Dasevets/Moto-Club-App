@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="20dp"
         android:text="Contacts"
-        android:textSize="25sp"
+        android:textSize="15sp"
         />
 
     <TextView
@@ -27,7 +27,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:text="Telephone: "
-        android:textSize="20sp"
+        android:textSize="18sp"
         />
 
     <TextView
@@ -39,31 +39,32 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:text="+7(999) XXX-XX-XX"
-        android:textSize="20sp"
+        android:textSize="18sp"
         />
 
     <TextView
         android:id="@+id/e_mail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/telephone"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintLeft_toRightOf="@id/number"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:text="E-Mail: "
-        android:textSize="20sp"
+        android:textSize="18sp"
         />
 
     <TextView
         android:id="@+id/mail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/number"
+        app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintLeft_toRightOf="@id/e_mail"
+
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:text="http://dashevets.v.a@gmail.com"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:autoLink="web"
         />
 
@@ -76,7 +77,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="25dp"
         android:text="Send to us"
-        android:textSize="20sp"
+        android:textSize="15sp"
         />
 
     <EditText
@@ -96,7 +97,7 @@
     <EditText
         android:id="@+id/send_text"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="50dp"
         app:layout_constraintTop_toBottomOf="@id/editTextTextEmailAddress2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -114,7 +115,7 @@
         android:layout_marginRight="15dp"
         android:layout_marginTop="10dp"
         android:text="Send"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:background="#00000000"
         android:textColor="@color/black"
         />

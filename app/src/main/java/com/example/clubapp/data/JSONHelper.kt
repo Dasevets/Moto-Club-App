@@ -1,12 +1,14 @@
 package com.example.clubapp.data
 
 import android.content.Context
+import android.widget.Toast
 import com.google.gson.Gson
+
 import java.io.FileOutputStream
 
 class JSONHelper {
 
-    private val FILE_NAME : String = "data.json"
+    private val FILE_NAME = "data.json"
 
     fun exportToJSON(context: Context, msg: List<Message>) : Boolean{
         var gson = Gson()
@@ -17,6 +19,7 @@ class JSONHelper {
             try {
                 context.openFileOutput(FILE_NAME, Context.MODE_PRIVATE).use { fileOutputStream ->
                     fileOutputStream.write(jsonString.toByteArray())
+
 
                     return true
                 }
