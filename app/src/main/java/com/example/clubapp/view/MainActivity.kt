@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
 
     private val aboutViewModel = App.instance.aboutViewModel
     private val servicesViewModel = App.instance.servicesViewModel
+    private val msgViewModel = App.instance.msgViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         }
         binding.contacts.setOnClickListener {
             val intent = Intent(this, ContactsActivity::class.java)
+            msgViewModel.getDB()
             startActivity(intent)
         }
     }
